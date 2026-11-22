@@ -1,0 +1,5 @@
+build/
+node_modules/
+asset-manifest.json
+static/
+/index.html
