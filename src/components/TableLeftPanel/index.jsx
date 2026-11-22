@@ -5,9 +5,7 @@ const TableLeftPanel = () => {
     <div className="left-panel blue-skin">
       <div className="left-panel__logo">
         <div className="left-panel__logo-title">CRM заявки</div>
-        <div className="left-panel__logo-subtitle">
-          учебный проект webcademy
-        </div>
+        <div className="left-panel__logo-subtitle">учёт заявок</div>
       </div>
 
       <div className="left-panel__user clearfix">

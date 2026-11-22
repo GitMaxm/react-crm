@@ -1,5 +1,5 @@
 import './bootstrap.min.css';
-import './style.css';
+import './styles/index.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 import {
