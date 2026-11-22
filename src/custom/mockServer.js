@@ -1,6 +1,8 @@
 import seedApplications from '../data/applications.json';
 
-const STORAGE_KEY = 'applications';
+// Версия в ключе: при смене демо-данных поднимается, и все получают
+// свежий сид вместо старых данных из localStorage
+const STORAGE_KEY = 'applications:v2';
 const NETWORK_DELAY = 400;
 
 const delay = (ms) =>

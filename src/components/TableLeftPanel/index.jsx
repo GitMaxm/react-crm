@@ -18,6 +18,10 @@ const TableLeftPanel = () => {
         </div>
       </div>
 
+      <div className="left-panel__demo-note">
+        Демо-данные: имена, телефоны и почты ненастоящие
+      </div>
+
       <div className="left-panel__navigation">
         <div className="left-panel__navigation-title">Заявки</div>
 

@@ -114,6 +114,15 @@
   font-weight: 600;
   margin-left: 76px;
 }
+.left-panel__demo-note {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 16px;
+  color: #8aacce;
+  font-size: 12px;
+  line-height: 1.4;
+}
 .left-panel__navigation {
   color: #cbdceb;
   font-size: 16px;
@@ -165,12 +174,20 @@
   background-color: #0d4d85;
   color: #fff;
 }
-.left-panel__navigation button.active,
-.left-panel__navigation button:focus-visible {
+.left-panel__navigation button:focus {
+  outline: none;
+}
+.left-panel__navigation button.active {
   text-decoration: none;
   background-color: #2865b1;
   color: #fff;
+}
+.left-panel__navigation button:focus-visible:not(.active) {
+  text-decoration: none;
+  background-color: #0d4d85;
+  color: #fff;
   outline: none;
+  box-shadow: inset 0 0 0 2px #8eb6da;
 }
 .left-panel__navigation .badge {
   background-color: #2865b1;

@@ -23,7 +23,7 @@ npm start      # http://localhost:3000
 - `src/pages/` — страницы Form, Table, Edit
 - `src/components/App/styles/` — стили по файлам: reset, layout (левая панель и шапка), project-nav, utilities (отступы), собираются через `index.css`
 - `src/custom/mockServer.js` — локальный слой данных вместо json-server: чтение и запись в `localStorage` с небольшой задержкой, как у сетевого запроса
-- `src/data/applications.json` — демо-данные (11 заявок), сид для первого запуска
+- `src/data/applications.json` — демо-данные (11 заявок), сид для первого запуска. Имена, телефоны и почты вымышленные, почты на зарезервированных для примеров доменах `example.*`
 - `public/` — фавиконка в `img/favicons/` и аватар в `img/avatars/`
 
 ## Деплой

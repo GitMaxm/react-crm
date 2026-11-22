@@ -154,15 +154,19 @@ function App() {
           <Routes>
             <Route
               path="/"
+              element={<Table useBodyClass={useBodyClass} />}
+            />
+            <Route
+              path="/table"
+              element={<Table useBodyClass={useBodyClass} />}
+            />
+            <Route
+              path="/form"
               element={<Form useBodyClass={useBodyClass} />}
             />
             <Route
               path="/edit/:id"
               element={<Edit useBodyClass={useBodyClass} />}
-            />
-            <Route
-              path="/table"
-              element={<Table useBodyClass={useBodyClass} />}
             />
             <Route path="*" element={<h1>404</h1>} />
           </Routes>
