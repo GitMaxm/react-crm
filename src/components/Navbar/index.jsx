@@ -6,7 +6,6 @@ const Navbar = () => {
       <div className="project-nav__links-wrapper">
         <Link to="/">Таблица с заявками</Link>
         <Link to="/form">Форма добавления заявок</Link>
-        {/* <Link to="/edit/:id">Редактирование заявки</Link> */}
       </div>
     </nav>
   );

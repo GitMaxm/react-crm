@@ -1,5 +1,5 @@
-import StatusbarTable from '../StatusbarTable';
-import TableApplications from '../TableApplications';
+import StatusbarTable from '@/components/StatusbarTable';
+import TableApplications from '@/components/TableApplications';
 
 const TableMain = () => {
   return (

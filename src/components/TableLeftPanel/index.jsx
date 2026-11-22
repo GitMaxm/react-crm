@@ -1,4 +1,4 @@
-import StatusbarLeftPanel from '../StatusbarLeftPanel';
+import StatusbarLeftPanel from '@/components/StatusbarLeftPanel';
 
 const TableLeftPanel = () => {
   return (

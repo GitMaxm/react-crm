@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { AppContext } from '../App';
+import { AppContext } from '@/components/App';
 import { useNavigate } from 'react-router-dom';
 
 const FormApplications = () => {
@@ -31,12 +31,11 @@ const FormApplications = () => {
   ));
 
   const getNextId = () => {
-    if (applications.length === 0) return 1; // Если заявок нет, начинаем с 1
-    const newId = Math.max(...applications.map((app) => app.id)) + 1; // Берем максимальный id и +1
+    if (applications.length === 0) return 1;
+    const newId = Math.max(...applications.map((app) => app.id)) + 1;
     return String(newId);
   };
 
-  // Форматируем дату в DD.MM.YYYY
   const getFormattedDate = () => {
     const date = new Date();
     const day = String(date.getDate()).padStart(2, '0');
@@ -99,8 +98,8 @@ const FormApplications = () => {
 
     const newApplication = {
       ...application,
-      id: getNextId(), // Теперь id = последний + 1
-      date: getFormattedDate(), // Дата в формате DD.MM.YYYY
+      id: getNextId(),
+      date: getFormattedDate(),
     };
 
     addApplication(newApplication);

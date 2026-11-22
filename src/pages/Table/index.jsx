@@ -1,5 +1,5 @@
-import TableLeftPanel from '../../components/TableLeftPanel';
-import TableMain from '../../components/TableMain';
+import TableLeftPanel from '@/components/TableLeftPanel';
+import TableMain from '@/components/TableMain';
 
 const Table = ({ useBodyClass }) => {
   useBodyClass('with-nav body--dashboard');

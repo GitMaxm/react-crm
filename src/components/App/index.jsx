@@ -10,24 +10,24 @@ import {
 import { useEffect, createContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
-import Navbar from '../Navbar';
-import Form from '../../pages/Form';
-import Edit from '../../pages/Edit';
-import Table from '../../pages/Table';
-import useBodyClass from '../../custom/useBodyClass';
+import Navbar from '@/components/Navbar';
+import Form from '@/pages/Form';
+import Edit from '@/pages/Edit';
+import Table from '@/pages/Table';
+import useBodyClass from '@/custom/useBodyClass';
 import {
   fetchApplications,
   createApplication,
   updateApplication,
   deleteApplication,
-} from '../../custom/mockServer';
+} from '@/custom/mockServer';
 
 export const AppContext = createContext(null);
 
 function App() {
-  const [applications, setApplications] = useState(null); // Данные из localStorage
-  const [isLoading, setIsLoading] = useState(true); // Флаг загрузки
-  const [error, setError] = useState(null); // Ошибка запроса
+  const [applications, setApplications] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchApplications()
@@ -46,7 +46,6 @@ function App() {
     Завершенный: 0,
   });
 
-  // Загружаем фильтры из localStorage при инициализации
   const [filters, setFilters] = useState(() => {
     const savedFilters = localStorage.getItem('filters');
     return savedFilters
@@ -57,14 +56,12 @@ function App() {
         };
   });
 
-  // Сохраняем фильтры в localStorage каждый раз, когда они изменяются
   useEffect(() => {
     localStorage.setItem('filters', JSON.stringify(filters));
   }, [filters]);
 
-  // Вызываем `statusCounter` при изменении `applications`
   useEffect(() => {
-    if (!applications) return; // Если данных нет
+    if (!applications) return;
 
     const statusCount = {
       Все: applications.length,
@@ -79,8 +76,8 @@ function App() {
       if (item.status === 'Завершенный') statusCount['Завершенный']++;
     });
 
-    setCounterStatus(statusCount); // Обновляем счетчик статусов
-  }, [applications]); // Только при изменении данных
+    setCounterStatus(statusCount);
+  }, [applications]);
 
   const addApplication = (application) => {
     createApplication(application).then((created) => {

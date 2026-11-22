@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import FormEdit from '../../components/FormEdit';
+import FormEdit from '@/components/FormEdit';
 
 const Edit = ({ useBodyClass }) => {
   useBodyClass('with-nav');

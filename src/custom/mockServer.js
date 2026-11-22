@@ -1,15 +1,11 @@
-import seedApplications from '../data/applications.json';
+import seedApplications from '@/data/applications.json';
 
-// Версия в ключе: при смене демо-данных поднимается, и все получают
-// свежий сид вместо старых данных из localStorage
 const STORAGE_KEY = 'applications:v2';
 const NETWORK_DELAY = 400;
 
 const delay = (ms) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-// Данные демо-CRM хранятся в localStorage посетителя; при первом
-// запуске (или повреждённых данных) используется сид из applications.json
 const readStore = () => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -17,9 +13,7 @@ const readStore = () => {
       const applications = JSON.parse(saved);
       if (Array.isArray(applications)) return applications;
     }
-  } catch (error) {
-    // Битый JSON в localStorage — откатываемся на сид
-  }
+  } catch (error) {}
   return null;
 };
 

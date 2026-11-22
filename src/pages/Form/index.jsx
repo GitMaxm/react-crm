@@ -1,4 +1,4 @@
-import FormApplications from '../../components/FormApplications';
+import FormApplications from '@/components/FormApplications';
 
 const Form = ({ useBodyClass }) => {
   useBodyClass('with-nav radial-bg flex-center');

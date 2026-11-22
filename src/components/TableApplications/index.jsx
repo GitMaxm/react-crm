@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { AppContext } from '../App';
+import { AppContext } from '@/components/App';
 
 const TableApplications = () => {
   const { filteredByStatusItems } = useContext(AppContext);

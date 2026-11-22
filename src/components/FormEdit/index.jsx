@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
-import { AppContext } from '../App';
+import { AppContext } from '@/components/App';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const FormEdit = () => {
@@ -26,14 +26,13 @@ const FormEdit = () => {
       : null,
   );
 
-  // Если заявка была удалена и исчезла из applications — уходим
   useEffect(() => {
     if (!application) {
       navigate('/table');
     }
   }, [application, navigate]);
 
-  if (!formData) return null; // Избегаем рендера, если данных нет
+  if (!formData) return null;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

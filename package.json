@@ -12,11 +12,12 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "react-app-rewired": "^2.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

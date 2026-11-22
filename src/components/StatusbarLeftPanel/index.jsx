@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AppContext } from '../App';
+import { AppContext } from '@/components/App';
 
 const StatusbarLeftPanel = () => {
   const { changeStatus, filters, counterStatus } =
